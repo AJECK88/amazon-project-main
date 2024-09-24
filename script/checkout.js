@@ -1,5 +1,6 @@
 import {cart} from '../data/cart.js'
 import { products } from '../data/products.js';
+import { formatcurrentcy } from './utils/maney.js';
 let cartSummaryHTML = ""
 cart.forEach((cartIterm)=>{
     const productId = cartIterm.productId;
@@ -30,7 +31,7 @@ cart.forEach((cartIterm)=>{
                  ${marchingprudect.name}
                 </div>
                 <div class="product-price">
-                   ${( marchingprudect.priceCents / 100).toFixed(2)}
+                   ${formatcurrentcy(marchingprudect.priceCents)}
                 </div>
                 <div class="product-quantity">
                   <span>
@@ -52,7 +53,7 @@ cart.forEach((cartIterm)=>{
                 <div class="delivery-option">
                   <input type="radio" checked
                     class="delivery-option-input"
-                    name="delivery-option-1">
+                    name="delivery-option-${marchingprudect.id}">
                   <div>
                     <div class="delivery-option-date">
                       Tuesday, June 21
@@ -65,7 +66,7 @@ cart.forEach((cartIterm)=>{
                 <div class="delivery-option">
                   <input type="radio"
                     class="delivery-option-input"
-                    name="delivery-option-1">
+                    name="delivery-option-${marchingprudect.id}">
                   <div>
                     <div class="delivery-option-date">
                       Wednesday, June 15
@@ -78,7 +79,7 @@ cart.forEach((cartIterm)=>{
                 <div class="delivery-option">
                   <input type="radio"
                     class="delivery-option-input"
-                    name="delivery-option-1">
+                    name="delivery-option-${marchingprudect.id}">
                   <div>
                     <div class="delivery-option-date">
                       Monday, June 13

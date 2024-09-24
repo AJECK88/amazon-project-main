@@ -1,5 +1,6 @@
 import { cart ,addTocard} from "../data/cart.js "
 import { products } from "../data/products.js"
+import { formatcurrentcy } from "./utils/maney.js"
 
 let productshtml =""
 
@@ -22,7 +23,7 @@ products.forEach((products)=>{
           </div>
 
           <div class="product-price">
-            ${(products.priceCents/100).toFixed(2)}
+            ${formatcurrentcy(products.priceCents)}
           </div>
 
           <div class="product-quantity-container">
