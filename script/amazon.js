@@ -56,18 +56,19 @@ products.forEach((products)=>{
 
 const  jsproductGrid = document.querySelector('.js-product-grid')
 jsproductGrid.innerHTML= productshtml;
+
  function updateCardQountity(){
-  let cartQuantity =0;
+  let cartQuantity = 0;
   cart.forEach((cartItem)=> {
-       cartQuantity +=cartItem.Quantity
-       document.querySelector(".cart-quantity").innerHTML=cartQuantity
+       cartQuantity += cartItem.Quantity
+       document.querySelector(".cart-quantity").innerHTML=  cartQuantity
   });
  }
 document.querySelectorAll(".js-add-card").forEach((button)=>{
   button.addEventListener('click', ()=>{
  const productId = (button.dataset.productId );
  addTocard(productId);
- updateCardQountity();
+ updateCardQountity(productId);
 
   });
 });
