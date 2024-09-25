@@ -103,11 +103,11 @@ document.querySelectorAll(".js-delet-link").
      const productId =link.dataset.productId;
      removeFromCard(productId);
      console.log(cart)
-    /*  const container =document.querySelector(
-      `js-cart-item-container-${productId}
-      `
-    ) */
-  
+     const container =document.querySelector(
+      `.js-cart-item-container-${productId}
+      ` 
+    );
+    container.remove(); 
   })
 
 })
