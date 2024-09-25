@@ -1,6 +1,7 @@
-import {cart} from '../data/cart.js'
+import {cart,removeFromCard} from '../data/cart.js'
 import { products } from '../data/products.js';
 import { formatcurrentcy } from './utils/maney.js';
+
 let cartSummaryHTML = ""
 cart.forEach((cartIterm)=>{
     const productId = cartIterm.productId;
@@ -12,12 +13,11 @@ cart.forEach((cartIterm)=>{
 
         }
 
-    })
-    console.log(marchingprudect);
+    });
 
      cartSummaryHTML +=
     `
-     <div class="cart-item-container">
+     <div class="cart-item-container  js-cart-item-container-${marchingprudect.id}">
             <div class="delivery-date">
               Delivery date: Tuesday, June 21
             </div>
@@ -40,7 +40,7 @@ cart.forEach((cartIterm)=>{
                   <span class="update-quantity-link link-primary">
                     Update
                   </span>
-                  <span class="delete-quantity-link link-primary">
+                  <span class="delete-quantity-link link-primary js-delet-link " data-product-id = "${marchingprudect.id}">
                     Delete
                   </span>
                 </div>
@@ -94,5 +94,21 @@ cart.forEach((cartIterm)=>{
           </div>
 
 `
+});
+
+document.querySelector(".js-order-summary").innerHTML= cartSummaryHTML;
+document.querySelectorAll(".js-delet-link").
+  forEach((link)=>{
+  link.addEventListener('click', () =>{
+     const productId =link.dataset.productId;
+     removeFromCard(productId);
+     console.log(cart)
+    /*  const container =document.querySelector(
+      `js-cart-item-container-${productId}
+      `
+    ) */
+  
+  })
+
 })
-document.querySelector(".js-order-summary").innerHTML= cartSummaryHTML
+
