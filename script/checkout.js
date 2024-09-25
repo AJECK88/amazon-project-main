@@ -12,7 +12,6 @@ cart.forEach((cartIterm)=>{
            marchingprudect = product;
 
         }
-
     });
 
      cartSummaryHTML +=
