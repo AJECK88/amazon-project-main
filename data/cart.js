@@ -8,8 +8,8 @@ if(!cart){
    localStorage.setItem('cart', JSON.stringify(cart))
  }
 export function addTocard(productId) {
-    let 
-        matchingitem;
+    let matchingitem;
+
  cart.forEach((cartItem)=>{
      if(productId === cartItem.productId){
        matchingitem = cartItem;
@@ -41,4 +41,15 @@ export function addTocard(productId) {
      cart = newcart;
      saveTostorege();
   }
- 
+ export function updateDeliveryOption(productId, deliveryOptionId){
+     let matchingiterm
+    cart.forEach((cartItem)=>{
+      if(productId === cartItem.productId){
+        matchingiterm = cartItem;
+     
+      }
+  
+    });
+     matchingiterm.deliveryOptionId = deliveryOptionId;
+     saveTostorege();
+  }
