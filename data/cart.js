@@ -46,6 +46,7 @@ export function addTocard(productId) {
     cart.forEach((cartItem)=>{
       if(productId === cartItem.productId){
         matchingiterm = cartItem;
+        
      
       }
   

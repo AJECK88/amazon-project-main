@@ -6,6 +6,7 @@ import { formatcurrentcy } from './utils/maney.js';
    let today = dayjs();
  const  delivaryDate = today.add(7, 'days');
 console.log( delivaryDate.format('dddd, MMMM d'))
+function reloadCart(){
 let cartSummaryHTML = ""
 cart.forEach((cartIterm)=>{
     const productId = cartIterm.productId ;
@@ -70,7 +71,7 @@ cart.forEach((cartIterm)=>{
     `;
 
 });
-
+ 
 function deliveryOptionHTML(marchingprudect, cartIterm){
   let Html = '';
   deliveryOption.forEach((deliveryOptions)=>{
@@ -129,7 +130,9 @@ document.querySelectorAll('.js-delivery-option')
    element.addEventListener ('click',() =>{
     const {productId, deliveryOptionId} = element.dataset
   updateDeliveryOption(productId,deliveryOptionId)
+   reloadCart();
    })
 })
 
- 
+}
+ reloadCart();
