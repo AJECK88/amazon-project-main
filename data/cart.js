@@ -9,7 +9,7 @@ if(!cart){
  }
 export function addTocard(productId) {
     let matchingitem;
-
+    
  cart.forEach((cartItem)=>{
      if(productId === cartItem.productId){
        matchingitem = cartItem;
@@ -21,7 +21,8 @@ export function addTocard(productId) {
      matchingitem.Quantity += 1
    }
   else{
-  cart.push({productId:productId,
+  cart.push({
+   productId:productId,
    Quantity:1,
    deliveryOptionId: '2'
   })
