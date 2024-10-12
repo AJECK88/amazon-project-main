@@ -181,10 +181,15 @@
 
 .payment-summary-money {
   text-align: right;
+  font-weight: 800;
+  color: rgb(211, 173, 4);
 }
 
+.payment-summary-money.orderTotal{
+  color: red;
+}
 .subtotal-row .payment-summary-money {
-  border-top: 1px solid rgb(222, 222, 222);
+  border-top: 1px solid #fa7e0b;
 }
 
 .subtotal-row div {

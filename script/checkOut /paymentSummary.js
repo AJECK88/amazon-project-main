@@ -20,10 +20,12 @@ export function renderPaymentsummary(){
        tax += (10/100)*productpricesents;
     });
 
-   document.querySelector('.totalCostOfItems').innerHTML = formatcurrentcy(productpricesents);
-   document.querySelector('.items').innerHTML = quantity;
-   document.querySelector('.shippingCost').innerHTML =formatcurrentcy(shippinpriceCent);
-   document.querySelector('.totalBeforTax').innerHTML =formatcurrentcy( productpricesents +shippinpriceCent);
-   document.querySelector('.tax').innerHTML = formatcurrentcy(tax);
-   document.querySelector('.orderTotal').innerHTML = formatcurrentcy( productpricesents +shippinpriceCent + tax);
+   document.querySelector('.totalCostOfItems').innerHTML ='$'+(formatcurrentcy(productpricesents))
+   /* || making the checked iterm functional with the orderlist */
+   document.querySelector('.items ').innerHTML = quantity;
+   document.querySelector('.checkIterm').innerHTML = quantity;
+   document.querySelector('.shippingCost').innerHTML = '$'+ formatcurrentcy(shippinpriceCent);
+   document.querySelector('.totalBeforTax').innerHTML ='$'+formatcurrentcy( productpricesents +shippinpriceCent);
+   document.querySelector('.tax').innerHTML = '$'+formatcurrentcy(tax);
+   document.querySelector('.orderTotal').innerHTML = '$'+formatcurrentcy( productpricesents +shippinpriceCent + tax);
 };
