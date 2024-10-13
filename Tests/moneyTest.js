@@ -1,4 +1,4 @@
-import { formatcurrentcy } from "../../../script/utils/maney.js";
+import { formatcurrentcy } from "../../script/utils/maney.js";
 /* || using a test cases to check my out come if it is correct. */
  
 console.log("converting cent int dollars")
