@@ -9,7 +9,9 @@ if(!cart){
  }
 export function addTocard(productId) {
     let matchingitem;
-    
+    const selectElement =document.querySelector(`.selectElement-${productId}`).value;
+    let  sum = '+';
+      console.log(eval(selectElement,sum))  
  cart.forEach((cartItem)=>{
      if(productId === cartItem.productId){
        matchingitem = cartItem;
