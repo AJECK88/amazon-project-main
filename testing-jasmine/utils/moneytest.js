@@ -1,4 +1,4 @@
- import {formatcurrentcy} from "../script/utils/maney.js";
+ import {formatcurrentcy} from "../../script/utils/maney.js";
  describe('test suite:formatcurrency',() =>{
  it('convert cents to dollars',()=>{
     expect(formatcurrentcy(2095)).toEqual('20.95');

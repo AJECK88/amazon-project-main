@@ -118,7 +118,27 @@
 .product-quantity .link-primary {
   margin-left: 3px;
 }
-
+.link-primary-active{
+  display: none;
+}
+ input[type ="number"]{
+  outline: none;  
+    color: red;
+    width: 2rem;
+  }
+   button{
+    color: rgb(129, 129, 224);
+   }
+  .quantity-update-link{
+    margin-left: 0.1rem;
+    
+  }
+  .quantity-update{
+    display: none;
+  }
+  .quantity-update-active{
+     display: block;
+  }
 @media (max-width: 1000px) {
   .delivery-options {
     /* grid-column: 1 means this element will be placed

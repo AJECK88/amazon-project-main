@@ -20,16 +20,17 @@ export function addTocard(productId) {
  
    });
    if(matchingitem){
-     matchingitem.Quantity += 1
+     matchingitem.Quantity += eval(selectElement,sum)
    }
   else{
   cart.push({
    productId:productId,
-   Quantity:1,
+   Quantity:eval(selectElement,sum),
    deliveryOptionId: '2'
   })
   } 
   saveTostorege();
+  
   };
    
    export function removeFromCard(productId){

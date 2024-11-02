@@ -27,7 +27,7 @@ products.forEach((products)=>{
           </div>
 
           <div class="product-quantity-container">
-            <select>
+            <select class="selectElement-${products.id}" click ='changeNum(})'>
               <option selected="" value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -54,6 +54,8 @@ products.forEach((products)=>{
         </div>
     `
 })
+
+
 
 const  jsproductGrid = document.querySelector('.js-product-grid')
 jsproductGrid.innerHTML= productshtml;
